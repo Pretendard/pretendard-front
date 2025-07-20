@@ -1,0 +1,23 @@
+.tab{
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    color: black;
+    font-family: var(--font-family-base);
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    border: 1px solid #E6E6E6;
+    border-radius: 20px;
+
+    padding: 0.875rem 0.75rem;
+}
+
+.tab.checked {
+    background-color: black;
+    font-weight: 600;
+}
+/* 1rem = 16px */

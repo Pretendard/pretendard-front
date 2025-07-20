@@ -1,0 +1,31 @@
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 1rem;
+    padding: 0.125rem 0.25rem;
+    box-sizing: border-box;
+    margin : 0 0.125rem 0 0;
+
+    font-family: var(--font-family-base);
+    font-size: 0.625rem;
+    font-weight: 500;
+    color: white;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.text {
+    margin: 0;
+}
+
+.new {
+    background-color: #66D575;
+}
+.hot {
+    background-color: #F24822;
+}
+.recommended {
+    background-color: #FFC129;
+}

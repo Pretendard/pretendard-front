@@ -1,0 +1,44 @@
+.cartButton {
+    padding: 0.625rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    border-radius: 2rem;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: #0000001A 0 0 8px;
+    position: relative;
+}
+
+.cartButton:hover {
+    background-color: var(--primary-color);
+}
+
+.cartIcon {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: opacity 0.2s ease;
+}
+
+.normal {
+    opacity: 1;
+}
+
+.hover {
+    opacity: 0;
+}
+
+.cartButton:hover .normal {
+    opacity: 0;
+}
+
+.cartButton:hover .hover {
+    opacity: 1;
+}

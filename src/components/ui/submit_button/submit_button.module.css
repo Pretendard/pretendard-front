@@ -1,0 +1,23 @@
+.btn {
+    width: 90%;
+    height: 3rem;         /* 높이는 3rem으로 고정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary-color);
+    color: white;
+    font-family: var(--font-family-base);
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 4px;
+    transition: 0.1s;
+
+    padding: 0 1rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-hover);
+}

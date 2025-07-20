@@ -1,0 +1,65 @@
+.menu{
+    height: 9.125rem;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid #F2F2F2;
+
+    background-color: white;
+    padding: 1rem 0;
+}
+
+.tags{
+    margin: 0;
+}
+
+.contents{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: black;
+    font-family: var(--font-family-base);
+}
+
+.description {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #999;
+    font-family: var(--font-family-base);
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.image{
+    display: inline-block;
+    width: 5.625rem;
+    height: 5.625rem;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+    border: 1px solid #CCC;
+    border-radius: 0.5rem;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}

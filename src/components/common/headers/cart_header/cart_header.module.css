@@ -1,0 +1,23 @@
+.header{
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 1.125rem;
+    background-color: white;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.content{
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    font-family: var(--font-family-base);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: black;
+}
