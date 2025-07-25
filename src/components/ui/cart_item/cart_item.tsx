@@ -23,7 +23,8 @@ export default function CartItem({
     imageUrl, 
     toppings = [],
     onQuantityChange,
-    onToppingChange
+    onToppingChange,
+    onRemove
 }: CartItemProps) {
     return (
         <div className={styles.cartItem}>
@@ -35,7 +36,7 @@ export default function CartItem({
                     <div className={styles.info}>
                         <div className={styles.nameRow}>
                             <div className={styles.name}>{name}</div>
-                            <Cancel />
+                            <Cancel onClick={onRemove} />
                         </div>
                         <div className={styles.price}>{price.toLocaleString()}원</div>
                     </div>

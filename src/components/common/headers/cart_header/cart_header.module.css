@@ -1,11 +1,19 @@
 .header{
-    height: 2.25rem;
+    min-height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 1rem 1.125rem;
     background-color: white;
-    border-bottom: 1px solid #F2F2F2;
+    border-bottom: 0.0625rem solid #F2F2F2;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 64rem;
+    z-index: 100;
+    box-sizing: border-box;
 }
 
 .content{

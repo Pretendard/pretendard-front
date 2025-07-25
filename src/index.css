@@ -56,7 +56,7 @@ html, body {
         align-items: flex-start;
     }
     #root {
-        width: 100vh;
+        width: 100vw;
         height: 100vh;               /* 뷰포트 높이 꽉 채우기 */
         background-color: #fff;
         box-shadow: none;

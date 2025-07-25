@@ -1,0 +1,25 @@
+.dishOrderPage {
+  min-height: 100vh;
+  background-color: white;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.content {
+  background-color: white;
+  min-height: calc(100vh - 3.75rem);
+  padding-top: 3.75rem;
+  width: 100%;
+}
+
+.content.withMockNotice {
+  padding-top: 6.25rem;
+}
+
+.backButton {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  cursor: pointer;
+}

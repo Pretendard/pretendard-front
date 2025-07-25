@@ -4,6 +4,14 @@
     padding: 1rem 1.125rem;
     background-color: #fff;
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 64rem;
+    min-height: 2.5rem;
+    z-index: 100;
+    border-bottom: 0.0625rem solid #F2F2F2;
 }
 
 /* texts 래퍼: 세로 스택 + gap */

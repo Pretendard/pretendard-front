@@ -9,7 +9,7 @@ interface MenuPreviewProps {
     image: string; // URL
 }
 
-export default function MenuPreview({ tags, title, description, price, image }: MenuPreviewProps) {
+export default function MenuPreview({ tags, title, description, price }: MenuPreviewProps) {
 
     const formated = new Intl.NumberFormat('ko-KR').format;
 

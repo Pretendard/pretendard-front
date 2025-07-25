@@ -4,9 +4,10 @@ import blackArrowSvg from '/svg/arrow_back_dark.svg';
 
 interface BackArrowProps {
     color?: 'white' | 'black';
+    onClick?: () => void;
 }
 
-export default function BackArrow({ color }: BackArrowProps) {
+export default function BackArrow({ color, onClick }: BackArrowProps) {
     const getSvgSource = () => {
         switch(color) {
             case 'white': return whiteArrowSvg;
@@ -16,7 +17,7 @@ export default function BackArrow({ color }: BackArrowProps) {
     };
 
     return (
-        <div className={styles.arrowbox}>
+        <div className={styles.arrowbox} onClick={onClick}>
             <img src={getSvgSource()} alt="Back Arrow" className={styles.arrow} />
         </div>
     );
