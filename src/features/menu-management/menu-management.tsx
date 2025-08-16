@@ -126,6 +126,13 @@ export default function MenuManagement() {
             + 새 메뉴 추가
           </button>
           <button 
+            className={styles.apiButton}
+            onClick={() => navigate('/apis')}
+            title="API 문서 보기"
+          >
+            📋 APIs
+          </button>
+          <button 
             className={styles.logoutButton}
             onClick={handleLogout}
           >

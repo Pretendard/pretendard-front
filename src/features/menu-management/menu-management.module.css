@@ -63,6 +63,26 @@
   background-color: var(--primary-color-hover);
 }
 
+.apiButton {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.apiButton:hover {
+  background-color: #138496;
+}
+
 .logoutButton {
   background-color: #6c757d;
   color: white;
@@ -153,6 +173,7 @@
   }
   
   .addButton,
+  .apiButton,
   .logoutButton {
     width: 100%;
   }
