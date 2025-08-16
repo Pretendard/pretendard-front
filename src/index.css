@@ -26,6 +26,24 @@ html, body {
     overflow: hidden;
 }
 
+/* 메뉴 관리 페이지, APIs 페이지, 인증 페이지는 데스크톱 전용이므로 전체 화면 사용 */
+body:has([data-page="menu-management"]), 
+body:has([data-page="apis"]),
+body:has([data-page="auth"]) {
+    background-color: #f8f9fa;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+body:has([data-page="menu-management"]) #root,
+body:has([data-page="apis"]) #root,
+body:has([data-page="auth"]) #root {
+    width: 100vw;
+    height: 100vh;
+    box-shadow: none;
+    overflow: auto;
+}
+
 /* 2) 데스크탑 (>1024px) – 폰 프레임 */
 @media (min-width: 1025px) {
     #root {

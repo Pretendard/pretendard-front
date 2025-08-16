@@ -81,10 +81,10 @@ export default function DishList({ onDishSelect, onMockDataStatus }: DishListPro
         
         // Try to fetch from API first
         const dishData = await dishService.getDishes();
-        setDishes(dishData);
-        setIsUsingMockData(false);
-        onMockDataStatus?.(false);
-        console.log('✅ API 연결 성공 - 실제 데이터 로드됨');
+        setDishes(dishData.data);
+        setIsUsingMockData(dishData.isUsingMockData);
+        onMockDataStatus?.(dishData.isUsingMockData);
+        console.log(dishData.isUsingMockData ? '⚠️ API 연결 실패 - 목데이터 사용' : '✅ API 연결 성공 - 실제 데이터 로드됨');
         
       } catch (apiError) {
         console.warn('⚠️ API 연결 실패 - 목 데이터로 대체:', apiError);

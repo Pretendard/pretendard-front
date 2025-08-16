@@ -1,63 +1,33 @@
 import { useState, useEffect } from 'react';
-import { type Dish } from '../../../services/api';
+import { type Dish, dishService } from '../../../services/api';
 import MenuPreview from '../../ui/menu_preview/menu_preview';
 import styles from './dish-list.module.css'
 
 interface DishListProps {
   onDishSelect?: (dish: Dish) => void;
+  onMockDataStatus?: (isUsingMockData: boolean) => void;
 }
 
-export default function DishList({ onDishSelect }: DishListProps) {
+export default function DishList({ onDishSelect, onMockDataStatus }: DishListProps) {
   const [dishes, setDishes] = useState<Dish[]>([]);
   const [loading, setLoading] = useState(true);
   const [error] = useState<string | null>(null);
 
   useEffect(() => {
-    // Mock data for testing
-    const mockDishes: Dish[] = [
-      {
-        id: 1,
-        dishData: {
-          name: "김치찌개",
-          description: "맛있는 김치찌개입니다",
-          image: "/images/home.png",
-          ingredients: [
-            { name: "김치", from: "한국" },
-            { name: "돼지고기", from: "한국" }
-          ],
-          price: 8000,
-          toppings: [
-            { name: "치즈", price: 1000 },
-            { name: "라면사리", price: 1500 }
-          ],
-          tag: [{ hot: true, new: false, picked: true }],
-          type: "찌개"
-        }
-      },
-      {
-        id: 2,
-        dishData: {
-          name: "불고기",
-          description: "달콤한 불고기",
-          image: "/images/home.png",
-          ingredients: [
-            { name: "소고기", from: "한국" }
-          ],
-          price: 15000,
-          toppings: [
-            { name: "버섯", price: 2000 }
-          ],
-          tag: [{ hot: false, new: true, picked: false }],
-          type: "고기"
-        }
+    const loadDishes = async () => {
+      try {
+        const result = await dishService.getDishes();
+        setDishes(result.data);
+        onMockDataStatus?.(result.isUsingMockData);
+      } catch (error) {
+        console.error('메뉴 데이터 로드 실패:', error);
+      } finally {
+        setLoading(false);
       }
-    ];
-    
-    setTimeout(() => {
-      setDishes(mockDishes);
-      setLoading(false);
-    }, 500);
-  }, []);
+    };
+
+    loadDishes();
+  }, [onMockDataStatus]);
 
   const mapTagsToMenuPreview = (tags: Array<{ hot: boolean; new: boolean; picked: boolean }>) => {
     const result: Array<'new' | 'hot' | 'recommended'> = [];
